@@ -1,0 +1,362 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 150px; /* Adjust as necessary */
+}
+
+.hamburger-menu {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: #fff; /* Change background to white */
+    overflow-x: hidden;
+    overflow-y: hidden; /* Hide any vertical overflow */
+    transition: 0.5s;
+    padding-top: 60px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: Add subtle shadow */
+}
+
+/* Ensure links and close button are styled correctly */
+.sidebar a,
+.sidebar .closebtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333; /* Change text color to dark gray */
+    display: block;
+    transition: 0.3s;
+    font-weight: normal; /* Match the font-weight */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.sidebar a:hover {
+    color: #000; /* Darken text on hover */
+    background-color: #f1f1f1; /* Optional: Add a slight background color on hover */
+}
+
+/* Close button styling */
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333; /* Match the text color */
+}
+
+/* Hamburger menu styling */
+#hamburgerMenu {
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+}
+
+/* Sidebar open state */
+#sidebar.open {
+    width: 250px; /* Adjust to the desired width */
+}
+
+
+
+
+/* Rides & Attractions Section Styling */
+.rides {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.rides h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.sticky-notes-container {
+    position: absolute;
+    right: 0;
+    top: 16%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.sticky-note-img {
+    width: 150px; /* Adjust the size of the sticky notes */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a 3D effect */
+}
+
+.note1 {
+    transform: rotate(-5deg); /* Slightly tilt the first note to the left */
+    margin-right: -20px; /* Overlap the notes slightly */
+}
+
+.note2 {
+    transform: rotate(5deg); /* Slightly tilt the second note to the right */
+    margin-left: -20px; /* Overlap the notes slightly */
+}
+.rides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.ride {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ride img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.ride h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ride p {
+    font-size: 16px;
+}
+
+/* Header Styling */
+.header-container img {
+    width: 90px; /* Header logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media
+
+
+/* Clear Floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* About Us Section */
+.about-us {
+    text-align: left; /* Ensure content is aligned to the left */
+    padding-bottom: 30px; /* Space between the content and footer */
+}
+
+.about-us img {
+    display: inline-block;
+    vertical-align: top; /* Align the image to the top */
+    width: 30%; /* Image takes up 30% of the container */
+    max-width: 500px; /* Set a maximum width for the image */
+    margin-right: 20px; /* Space between the image and the text */
+    height: auto;
+}
+
+.about-us-text {
+    display: inline-block;
+    vertical-align: top; /* Align the text to the top */
+    width: calc(70% - 20px); /* Remaining width after image */
+    max-width: 389px; /* Limit the width of the text block */
+    max-height: 100%; /* Ensure text doesn't extend below the image */
+    overflow-y: auto; /* Allow scroll if text overflows */
+}
+
+.about-us h1 {
+    margin: 0 0 20px 0; /* Space below the header */
+}
+
+.about-us p {
+    margin: 0; /* Remove unnecessary margins */
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add clearfix to about-us section */
+.about-us.clearfix {
+    margin-bottom: auto; /* Adjust margin to ensure space between content and footer */
+}
+/* Additional margin or padding to create space between the text and footer */
+.about-us {
+    padding-bottom: 100px; /* Adjust this value to create enough space between content and footer */
+}
+
+
+/* FAQ Section Styles */
+.faq-container {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #34495e;
+    cursor: pointer;
+}
+
+.faq-answer p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 1000px; /* Arbitrary high value */
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 20px;
+    /* Layout the contact form and related content side by side */
+}
+
+.contact-container {
+    width: 45%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Style for the contact form container with padding and box shadow */
+}
+
+.contact-container h1 {
+    margin-top: 0;
+    /* Remove top margin from the heading */
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    color: #666;
+    /* Style for the paragraph text in the contact form */
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    /* Style for the input fields and textarea with padding, border, and background color */
+}
+
+.contact-container button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Style for the submit button in the contact form */
+}
+
+.contact-container button:hover {
+    background-color: #575757;
+    /* Change button background on hover */
+}
